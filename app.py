@@ -24,14 +24,6 @@ def get_slant(query):
         response_code = 404
     return json.dumps(response), response_code
 
-@app.route("/getChannelSlant/<query>")
-def get_channel_slant(query):
-    response = slant.get_channel_slant(query)
-    response_code = 200
-    if response.get('error', False):
-        response_code = 404
-    return json.dumps(response), response_code
-
 @app.route("/getMetadata/<query>")
 @cross_origin()
 def get_metadata(query):
@@ -53,4 +45,4 @@ def get_comments(query):
 
 @app.route("/")
 def main():
-    return "<p>Noyce API</p>"
+    return "<p>YouTube Audit API</p>"

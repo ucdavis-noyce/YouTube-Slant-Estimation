@@ -27,7 +27,7 @@ def get_metadata(videoId):
     url = 'https://youtube.com/watch?v=%s' % videoId
 
     try:
-        js = json.loads(subprocess.run(['./youtube-dl', '-J', url], stdout=subprocess.PIPE).stdout)
+        js = json.loads(subprocess.run(['youtube-dl', '-J', url], stdout=subprocess.PIPE).stdout)
     except:
         return None
         
