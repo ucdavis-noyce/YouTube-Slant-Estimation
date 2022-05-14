@@ -14,6 +14,7 @@ Simple web-server for collecting tweets, metadata, and comments for YouTube vide
 Consider the following URL: `https://www.youtube.com/watch?v=XpeOIww_l4A`. The part of the URL after the `watch?v=` is the video ID. The various endpoints of the server take this video ID and return the corresponding data. For example, to get the metadata for this video, you can use cURL as follows: `curl http://localhost:5000/getMetadata/XpeOIww_l4A`
 
 ## API Endpoints
+In all these endpoints, replace `<video-id>` with the ID of the video, which can be extracted from the URL as in the example above.
 - `/getMetadata/<video-id>`: Get video metadata using `youtube-dl`.
 - `/getTweets/<video-id>`: Get tweets mentioning the video using the Twitter API.
 - `/getComments/<video-id>`: Get comments on the video using the YouTube API.
