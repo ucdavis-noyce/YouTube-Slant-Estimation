@@ -3,7 +3,7 @@ import json
 import requests
 from random import choice
 
-with open('data/tokens.txt') as tokens:
+with open('data/twitter-tokens.txt') as tokens:
     bearer_tokens = tokens.read().strip().split('\n')
 
 def get_tweets(q):

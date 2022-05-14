@@ -53,7 +53,7 @@ def get_metadata(videoId):
     return metadata
 
 def get_api_key():
-    with open('youtube-api-keys.txt') as fp:
+    with open('data/youtube-tokens.txt') as fp:
         return choice(fp.read().strip().split('\n'))
          
 def get_comment_threads(videoId, pages=5, maxResults=100):
